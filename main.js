@@ -1,3 +1,25 @@
+/* Mobile Navigation Toggle */
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    const toggle = document.querySelector('.menu-toggle');
+
+    if (!navbar || !toggle) return;
+
+    const setOpen = (open) => {
+        navbar.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', open);
+    };
+
+    toggle.addEventListener('click', () => {
+        setOpen(!navbar.classList.contains('nav-open'));
+    });
+
+    // Close the menu after picking a link
+    navbar.querySelectorAll('nav a').forEach((link) => {
+        link.addEventListener('click', () => setOpen(false));
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.querySelector('.testimonial-carousel');
     const prevBtn = document.querySelector('.prev-btn');
