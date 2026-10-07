@@ -11,6 +11,8 @@
 
 ![Home page – desktop](screenshots/screenshot-desktop.png "Desktop view")
 
+![Home page – mobile](screenshots/screenshot-mobile.png "Mobile view")
+
 ## Built With
 
 - HTML5
